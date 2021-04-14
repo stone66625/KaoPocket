@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_travel"
+        android:icon="@drawable/camera"
+        android:title="@string/title_travel" />
+
+    <item
+        android:id="@+id/navigation_restruaurant"
+        android:icon="@drawable/restaurant"
+        android:title="@string/title_restaurant" />
+
+    <item
+        android:id="@+id/navigation_bike"
+        android:icon="@drawable/bike"
+        android:title="@string/title_bike" />
+
+</menu>
