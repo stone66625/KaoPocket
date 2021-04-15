@@ -1,5 +1,6 @@
-package tw.kao.pocket.ui.home;
+package tw.kao.pocket.ui.travel;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,22 +13,36 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import tw.kao.pocket.Main;
 import tw.kao.pocket.R;
 
-public class HomeFragment extends Fragment {
+public class TravelFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private TravelViewModel travelViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        travelViewModel = new ViewModelProvider(this).get(TravelViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_travel, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        travelViewModel.getText().observe(getActivity(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
+
+            }
+        });
+
+        travelViewModel.getNumber().observe(getViewLifecycleOwner(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+
             }
         });
         return root;
+
+
+
     }
 }

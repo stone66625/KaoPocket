@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_travel"
-        android:name="tw.kao.pocket.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="tw.kao.pocket.ui.travel.TravelFragment"
+        android:label="@string/title_travel"
+        tools:layout="@layout/fragment_travel" />
 
     <fragment
         android:id="@+id/navigation_restruaurant"
-        android:name="tw.kao.pocket.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="tw.kao.pocket.ui.restaurant.RestaurantFragment"
+        android:label="@string/title_restaurant"
+        tools:layout="@layout/fragment_restaurant" />
 
     <fragment
         android:id="@+id/navigation_bike"
-        android:name="tw.kao.pocket.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="tw.kao.pocket.ui.youbike.YoubikeFragment"
+        android:label="@string/title_bike"
+        tools:layout="@layout/fragment_youbike" />
 </navigation>

@@ -1,2 +1,4 @@
+include ':Retrofit_json'
 include ':Kaopocket'
+
 rootProject.name = "KaoPocket"

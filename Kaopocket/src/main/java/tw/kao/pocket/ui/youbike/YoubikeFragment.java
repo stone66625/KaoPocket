@@ -1,4 +1,4 @@
-package tw.kao.pocket.ui.notifications;
+package tw.kao.pocket.ui.youbike;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import tw.kao.pocket.R;
 
-public class NotificationsFragment extends Fragment {
+public class YoubikeFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private YoubikeViewModel youbikeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        youbikeViewModel =
+                new ViewModelProvider(this).get(YoubikeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_youbike, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        youbikeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

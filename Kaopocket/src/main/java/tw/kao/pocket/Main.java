@@ -10,7 +10,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import tw.kao.pocket.databinding.MainBinding;
+
 public class Main extends AppCompatActivity {
+
+    private MainBinding mainBinding ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
