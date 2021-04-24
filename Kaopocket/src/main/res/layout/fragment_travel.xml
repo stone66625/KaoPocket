@@ -5,6 +5,7 @@
     android:id="@+id/travel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/ps10dp"
     tools:context=".ui.travel.TravelFragment">
 
     <ImageView
@@ -20,8 +21,12 @@
 
     <Spinner
         android:id="@+id/AreaSpinner"
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/p5dp"
+        android:layout_marginBottom="@dimen/p5dp"
+        android:background="@color/DarkOrange"
         app:layout_constraintBottom_toTopOf="@+id/AttractionsRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,20 +37,9 @@
         android:id="@+id/AttractionsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/text_home"
+        android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AreaSpinner" />
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AttractionsRecyclerView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

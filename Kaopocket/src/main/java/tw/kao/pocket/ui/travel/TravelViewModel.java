@@ -21,12 +21,13 @@ public class TravelViewModel extends ViewModel {
 
     private MutableLiveData<String> mText = new MutableLiveData<>();
     private MutableLiveData<Integer> mNumber = new MutableLiveData<>();
-    private String name,tel,add,px,py,picture1;
+    private MutableLiveData< ArrayList< HashMap<String, String> > > travelOpenData = new MutableLiveData<>();
+    private String name,Opentime,tel,add,px,py,picture1,section,ticket;
 
     public TravelViewModel() {
 
-        mText.setValue("hahaha");
-        mNumber.setValue(1);
+        mText.setValue("hahaha"); //測試用，先不刪
+        mNumber.setValue(1);//測試用，先不刪
         Load_TravelOpenData();
 
 
@@ -38,6 +39,10 @@ public class TravelViewModel extends ViewModel {
 
     public LiveData<Integer> getNumber(){
         return mNumber;
+    }
+
+    public LiveData< ArrayList< HashMap<String, String> >> getTravelOpenData(){
+        return travelOpenData;
     }
 
     private void Load_TravelOpenData() {
@@ -59,31 +64,39 @@ public class TravelViewModel extends ViewModel {
             @Override
             public void onResponse(Call<TravelResponse> call, Response<TravelResponse> response) {
 
-                if(response.code()==200)
-                {
+                if(response.code()==200) {
                     ArrayList<Info> travelDataArray = new ArrayList<Info>();
                     travelDataArray = response.body().data.XML_Head.Infos.Info;
+                    ArrayList< HashMap<String, String> > datas = new ArrayList<>();
+
 
                     for(int i=0; i<travelDataArray.size(); i++){
 
+                        HashMap<String, String> data = new HashMap<>();
                         name=travelDataArray.get(i).Name;
+                        Opentime=travelDataArray.get(i).Opentime;
                         tel=travelDataArray.get(i).Tel;
                         add=travelDataArray.get(i).Add;
                         px=travelDataArray.get(i).Px;
                         py=travelDataArray.get(i).Py;
                         picture1=travelDataArray.get(i).Picture1;
+                        ticket=travelDataArray.get(i).Ticketinfo;
+                        section=add.substring(6,9);
 
-                        HashMap<String, String> data = new HashMap<>();
                         data.put("name", name);
+                        data.put("Opentime", Opentime);
                         data.put("tel", tel);
                         data.put("add", add);
                         data.put("px", px);
                         data.put("py", py);
                         data.put("picture1", picture1);
+                        data.put("section", section);
+                        data.put("ticket",ticket);
 
-
+                        datas.add(data);
+                        
                     }
-                    int a=0;
+                    travelOpenData.setValue(datas);
                 }
 
             }

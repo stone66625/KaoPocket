@@ -19,7 +19,6 @@ class data {
     @SerializedName("XML_Head")
     public XML_Head XML_Head;
 
-
 }
 
 //第三階JSONObject
@@ -43,6 +42,8 @@ class Info {
     //第五階裡面 我要的的東西 name,tel,add,px,py,picture1;
     @SerializedName("Name")
     public String Name;
+    @SerializedName("Opentime")
+    public String Opentime;
     @SerializedName("Tel")
     public String Tel;
     @SerializedName("Add")
@@ -53,4 +54,7 @@ class Info {
     public String Py;
     @SerializedName("Picture1")
     public String Picture1;
+    @SerializedName("Ticketinfo")
+    public String Ticketinfo;
+
 }

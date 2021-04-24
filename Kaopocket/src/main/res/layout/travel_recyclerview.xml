@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/attractions_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:textColor="@color/Brown"
+        android:textSize="24sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/recycler_open"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/reclcler_open"
+            android:textColor="@color/MidnightBlue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/attractions_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Bisque"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/recycler_address"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/reclcler_add"
+            android:textColor="@color/MidnightBlue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/attractions_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Bisque"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/recycler_tel"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/reclcler_tel"
+            android:textColor="@color/MidnightBlue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/attractions_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Bisque"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/recycler_ticket"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/reclcler_ticket"
+            android:textColor="@color/MidnightBlue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/attractions_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Bisque"
+            android:textSize="16sp" />
+    </TableRow>
+
+</LinearLayout>

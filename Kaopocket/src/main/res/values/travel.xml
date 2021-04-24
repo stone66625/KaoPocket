@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reclcler_open">開放時間:</string>
+    <string name="reclcler_add">地址:</string>
+    <string name="reclcler_tel">電話:</string>
+    <string name="reclcler_ticket">票價資訊:</string>
+</resources>
